@@ -144,8 +144,8 @@ class CMakeBuild(build_ext):
                 cmake_args += ["-DZLIB_USE_STATIC_LIBS=TRUE"]
 
             # Test install curl using vcpkg on linux
-            print("env root is: " + os.environ.get("VCPKG_INSTALLATION_ROOT", ""))
-            vcpkg_installation_root = os.environ.get("VCPKG_INSTALLATION_ROOT", r"/usr/local/share/vcpkg")
+            print("env root is: " + os.environ.get("VCPKG_ROOT", ""))
+            vcpkg_installation_root = os.environ.get("VCPKG_ROOT", r"/usr/local/share/vcpkg")
             print("set env root is: " + vcpkg_installation_root)
             test = os.path.exists(vcpkg_installation_root)
             print(f"path exists is: {test} ")

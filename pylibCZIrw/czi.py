@@ -914,9 +914,9 @@ class CziWriter:
         ----------
         : Dict[str, int]
             Plane coordinates.
-            Example: {"T":0, "Z":1, "C":0, "S": 0}.
+            Example: {"T":0, "Z":1, "C":0, "H":0, "S": 0}.
         """
-        default_plane = {"T": 0, "Z": 0, "C": 0, "S": scene}
+        default_plane = {"T": 0, "Z": 0, "C": 0, "H":0, "S": scene}
         if plane:
             default_plane.update((k, v) for k, v in plane.items() if k in default_plane)
         return default_plane
